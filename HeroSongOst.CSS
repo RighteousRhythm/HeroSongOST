@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1em;
+  margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
+               'avenir next', avenir, /* MacOS and iOS */
+               'Segoe UI', /* Windows */
+               'lucida grande', /* Older MacOS */
+               'helvetica neue', helvetica, /* Older MacOS */
+               'Fira Sans', /* Firefox OS */
+               roboto, noto, /* Google stuff */
+               'Droid Sans', /* Old Google stuff */
+               cantarell, oxygen, ubuntu, /* Linux stuff */
+               'franklin gothic medium', 'century gothic', /* Windows stuff */
+               'Liberation Sans', /* Linux */
+               sans-serif; /* Everything else */;
+  color: #d9d9d9;
+  background-color: #800000;
+  background: linear-gradient(135deg, rgba(128,0,0,1) 25%, rgba(214,84,14,1) 100%);
+  background-attachment: fixed;
+}
+
+header {
+  max-width:1200px;
+  background-color:black;
+  color:white;
+  margin-right:auto;
+  margin-left:auto;
+}
+
+h1 {
+	padding: 1em;
+	margin: 0;
+}
+
+
+hgroup img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+
+nav {
+  display: block;
+  margin: 0 auto;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 14px;
+}
+
+nav li {
+  padding: 0.5em 1em;
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:link,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #808080;
+}
+
+section {
+  max-width:1200px;
+  background-color:#1a1a1a;
+  margin:0 auto;
+  border: 1em solid black;
+  padding: 0 1em;
+  line-height: 1.4;
+}
+
+footer {
+  max-width:1200px;
+  background-color:black;
+  color:white;  
+  margin:0 auto;
+  padding: 1em;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+  letter-spacing: 0.025em;
+}
+
+footer a:hover,
+footer a:focus {
+  opacity: 0.8;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
