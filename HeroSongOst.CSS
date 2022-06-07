@@ -80,8 +80,7 @@ nav a:focus {
 
 section {
   max-width:1200px;
-  background-color:#1a1a1a;
-  background: linear-gradient(135deg, rgba(32,32,32,1) 25%, rgba(64,64,64,1) 100%);
+  background-color:rgb(26, 26, 26);
   margin:0 auto;
   border: 1em solid black;
   padding: 0 1em;
