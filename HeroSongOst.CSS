@@ -246,7 +246,7 @@ footer {
   background-color: black;
   color: white;
   margin: 0 auto;
-  padding: 1em;
+  padding: 1em 0;
   position: -webkit-sticky;
   position: sticky;
   z-index: 1000;
@@ -264,6 +264,7 @@ footer {
 }
 
 .audio-controls {
+  flex-shrink: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -298,14 +299,10 @@ footer {
 }
 
 .details {
-  flex: 1rem;
+  flex: 1 0 auto;
   margin: 10px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: left;
-  height: 100%;
-  max-width: 20%;
+  text-align: center;
+  flex-shrink: 0;
   border-left: 0.05em solid rgba(52, 48, 48, 0.35);
   border-right: 0.05em solid rgba(52, 48, 48, 0.35);
 }
@@ -338,11 +335,11 @@ footer {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 3px;
+  width: 4px;
   height: 15px;
   background: white;
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 1em;
 }
 
 .seek_slider:hover,
@@ -369,4 +366,13 @@ footer {
 .current-time,
 .total-duration {
   padding: 0.2rem;
+}
+
+@media (max-width: 831px) {
+  .mute-track,
+  .audio-volume,
+  .current-time,
+  .audio-progress {
+    display: none;
+  }
 }
