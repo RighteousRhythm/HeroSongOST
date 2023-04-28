@@ -18,31 +18,31 @@ let isPlaying = false;
 let updateTimer;
 
 //creates audio element for player
-let curr_track = document.createElement('audio');
+let curr_track = document.createElement("audio");
 
 //define playlist
 let track_list = [
   {
     name: "Crick Hospitality",
-    Artist:  "Timothy Vujicic",
+    Artist: "Timothy Vujicic",
     //image: "image url",
     path: "Audio/Crick_Hospitality.wav",
   },
   {
     name: "The Puppet Queen",
-    Artist:  "Timothy Vujicic",
+    Artist: "Timothy Vujicic",
     //image: "image url",
     path: "Audio/The_Puppet_Queen.mp3",
   },
   {
     name: "Autumn Court Regality",
-    Artist:  "Timothy Vujicic",
+    Artist: "Timothy Vujicic",
     //image: "image url",
     path: "Audio/Autumn_Court_Regality.mp3",
   },
   {
     name: "Styled Minimalism",
-    Artist:  "Timothy Vujicic",
+    Artist: "Timothy Vujicic",
     //image: "image url",
     path: "Audio/Styled_Minimalism.mp3",
   },
@@ -88,25 +88,23 @@ function playpauseTrack() {
 function playTrack() {
   curr_track.play();
   isPlaying = true;
-  playpause_btn.innerHTML = '<img src="Images/pause.png" alt="pause"></img>';
+  playpause_btn.innerHTML = '<img src="Images/pause.png" alt="pause"/>';
 }
 
 function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
-  playpause_btn.innerHTML = '<img src="Images/play.png" alt="play"></img>';
+  playpause_btn.innerHTML = '<img src="Images/play.png" alt="play"/>';
 }
 
 function nextTrack() {
-  if (track_index < track_list.length - 1)
-  track_index +=1;
+  if (track_index < track_list.length - 1) track_index += 1;
   else track_index = 0;
   loadTrack(track_index);
 }
 
 function prevTrack() {
-  if (track_index > 0)
-  track_index -= 1;
+  if (track_index > 0) track_index -= 1;
   else track_index = track_list.length - 1;
   loadTrack(track_index);
 }
@@ -116,7 +114,7 @@ function seekTo() {
   curr_track.currentTime = seekto;
 }
 
-function setVolume () {
+function setVolume() {
   curr_track.volume = volume_slider.value / 100;
 }
 
@@ -152,4 +150,3 @@ function seekUpdate() {
     total_duration.textContent = durationMinutes + ":" + durationSeconds;
   }
 }
-
