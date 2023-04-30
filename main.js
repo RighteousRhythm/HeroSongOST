@@ -12,6 +12,29 @@ let volume_slider = document.querySelector(".volume_slider");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 
+//Unique Play buttons
+  /*let playpause_btn1 = document.querySelector(".playpause-track1");
+  let playpause_btn2 = document.querySelector(".playpause-track2");
+  let playpause_btn3 = document.querySelector(".playpause-track3");
+  let playpause_btn4 = document.querySelector(".playpause-track4");
+  let playpause_btn5 = document.querySelector(".playpause-track5");
+  let playpause_btn6 = document.querySelector(".playpause-track6");
+  let playpause_btn7 = document.querySelector(".playpause-track7");
+  let playpause_btn8 = document.querySelector(".playpause-track8");
+  let playpause_btn9 = document.querySelector(".playpause-track9");*/
+
+let button_list = [
+  {playpause_btn1 : document.querySelector(".playpause-track1")},
+  {playpause_btn2 : document.querySelector(".playpause-track2")},
+  {playpause_btn3 : document.querySelector(".playpause-track3")},
+  {playpause_btn4 : document.querySelector(".playpause-track4")},
+  {playpause_btn5 : document.querySelector(".playpause-track5")},
+  {playpause_btn6 : document.querySelector(".playpause-track6")},
+  {playpause_btn7 : document.querySelector(".playpause-track7")},
+  {playpause_btn8 : document.querySelector(".playpause-track8")},
+  {playpause_btn9 : document.querySelector(".playpause-track9")},
+];
+
 //specify global variabls
 let track_index = 0;
 let isPlaying = false;
@@ -23,28 +46,58 @@ let curr_track = document.createElement("audio");
 //define playlist
 let track_list = [
   {
-    name: "Crick Hospitality",
-    Artist: "Timothy Vujicic",
-    //image: "image url",
-    path: "Audio/Crick_Hospitality.wav",
-  },
-  {
     name: "The Puppet Queen",
     Artist: "Timothy Vujicic",
     //image: "image url",
     path: "Audio/The_Puppet_Queen.mp3",
   },
   {
+    name: "Crick Hospitality",
+    Artist: "Timothy Vujicic",
+    //image: "image url",
+    path: "Audio/Crick_Hospitality.wav",
+  },
+  {
+    name: "Defend the Defenseless",
+    Artist: "Timothy Vujicic",
+    //image: "image url",
+    path: "Audio/Defend_the_Defenseless.mp3",
+  },
+  {
+    name: "Rayguns & Katanas",
+    Artist: "Timothy Vujicic",
+    //image: "image url",
+    path: "Audio/Rayguns_&_Katanas-001.wav",
+  },
+  {
     name: "Autumn Court Regality",
     Artist: "Timothy Vujicic",
     //image: "image url",
-    path: "Audio/Autumn_Court_Regality.mp3",
+    path: "Audio/Autumn_Court_Regality.wav",
   },
   {
     name: "Styled Minimalism",
     Artist: "Timothy Vujicic",
     //image: "image url",
     path: "Audio/Styled_Minimalism.mp3",
+  },
+  {
+    name: "Emergent",
+    Artist: "Timothy Vujicic",
+    //image: "image url",
+    path: "Audio/Emergent.wav",
+  },
+  {
+    name: "Podcast Sample #1",
+    Artist: "Timothy Vujicic",
+    //image: "image url",
+    path: "Audio/ST_Podcast_Audio_Bounce.mp3",
+  },
+  {
+    name: "Podcast Sample #2",
+    Artist: "Timothy Vujicic",
+    //image: "image url",
+    path: "Audio/DT_Podcast_Audio_Bounce.mp3",
   },
 ];
 
@@ -65,10 +118,10 @@ function loadTrack(track_index) {
   updateTimer = setInterval(seekUpdate, 1000);
 
   //move to next track when current track ends
-  curr_track.addEventListener("ended", nextTrack);
+  curr_track.addEventListener("ended", nextTrack, playTrack);
 
-  if (isPlaying) playTrack();
-  else pauseTrack();
+ /* if (isPlaying) playTrack();
+  else pauseTrack();*/
 }
 
 //function to reset player values to default
@@ -89,24 +142,44 @@ function playTrack() {
   curr_track.play();
   isPlaying = true;
   playpause_btn.innerHTML = '<img src="Images/pause.png" alt="pause"/>';
+  x = track_index;
+  button_list[x].innerHTML = '<img src="Images/pause.png" alt="pause"/>';
 }
 
 function pauseTrack() {
   curr_track.pause();
   isPlaying = false;
   playpause_btn.innerHTML = '<img src="Images/play.png" alt="play"/>';
+  x = track_index;
+  button_list[x].innerHTML = '<img src="Images/play.png" alt="play"/>';
+}
+
+function ppSpecTrack(x) {
+  if (x == track_index) {
+    if (!isPlaying) {
+      playTrack();
+    }
+    else pauseTrack();
+  }
+  else {
+    track_index = x;
+    loadTrack(track_index);
+    playTrack();
+  }
 }
 
 function nextTrack() {
   if (track_index < track_list.length - 1) track_index += 1;
   else track_index = 0;
   loadTrack(track_index);
+  playTrack();
 }
 
 function prevTrack() {
   if (track_index > 0) track_index -= 1;
   else track_index = track_list.length - 1;
   loadTrack(track_index);
+  playTrack();
 }
 
 function seekTo() {

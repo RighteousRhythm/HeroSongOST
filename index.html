@@ -24,7 +24,8 @@
     <nav>
       <ul>
         <li><a href="#music">Music</a></li>
-        <li><a href="#podcast">Podcast</a></li>
+        <li><a href="#voice">Voice</a></li>
+        <li><a href="#ambience">Ambience</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -32,7 +33,128 @@
       <section id="music" class="section--music">
         <div class="section__title">
           <h2>Music</h2>
+          <p>A variety of different styles to fit a variety of different vibes.</p>
+        </div>
+        <div class="section__content">
+          <ul class="section__content__list">
+            <li>
+              <button class="section__content__list__button playpause-track1" onclick="ppSpecTrack(0)" aria-labelledby="track1">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track1">
+                The Puppet Queen
+                <small>
+                  This track has multiple sections that were originally looped for a D&D encounter where players would progress through a short dungeon, eventually coming to a boss encounter with multiple phases.
+                </small>
+              </div>
+            </li>
+            <li>
+              <button class="section__content__list__button playpause-track2" onclick="ppSpecTrack(1)" aria-labelledby="track2">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track2">
+                Crick Hospitality
+                <small>
+                  Inspired by a setting called "The Crick" from "Not Another D&D Podcast", this track was written to capture the swampy yet beautiful setting and it's folksey inhabitants.
+                </small>
+              </div>
+            </li>
+            <li>
+              <button class="section__content__list__button playpause-track3" onclick="ppSpecTrack(2)" aria-labelledby="track3">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track3">
+                Defend the Defenseless
+                <small>
+                  A melancholy yet hopeful begining stares down a looming eldritch threat.
+                </small>
+              </div>
+            </li>
+            <li>
+              <button class="section__content__list__button playpause-track4" onclick="ppSpecTrack(3)" aria-labelledby="track4">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track4">
+                Rayguns & Katanas
+                <small>
+                  An 8 bit pump-up designed for retro platformers.
+                </small>
+              </div>
+            </li>
+            <li>
+              <button class="section__content__list__button playpause-track5" onclick="ppSpecTrack(4)" aria-labelledby="track5">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track5">
+                Autumn Court Regality
+                <small>
+                  The introduction of an embattled monarch and the militarized citizens of her castle bustling about ensuring supplies get where they need to go, while soldiers prepare to return to the front.
+                </small>
+              </div>
+            </li>
+            <li>
+              <button class="section__content__list__button playpause-track6" onclick="ppSpecTrack(5)" aria-labelledby="track6">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track6">
+                Styled Minimalism
+                <small>
+                  Theme song I made for the "Tiny Ambitions" Podcast.
+                </small>
+              </div>
+            </li>
+            <li>
+              <button class="section__content__list__button playpause-track7" onclick="ppSpecTrack(6)" aria-labelledby="track7">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track7">
+                Emergent
+                <small>
+                  Created using specific samples from Native Instruments "Metropolis" for a trailer scoring contest.
+                </small>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="voice" class="section--voice">
+        <div class="section__title">
+          <h2>Voice</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="section__content">
+          <ul class="section__content__list">
+            <li>
+              <button class="section__content__list__button playpause-track8" onclick="ppSpecTrack(7)" aria-labelledby="track8">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track8">
+                Podcast Sample #1
+                <small>
+                 An exerpt from a conversation about games within games!
+                </small>
+              </div>
+            </li>
+            <li>
+              <button class="section__content__list__button playpause-track9" onclick="ppSpecTrack(8)" aria-labelledby="track9">
+                <img src="Images/play.png" alt="play" />
+              </button>
+              <div class="section__content__list__description" id="track9">
+                Podcast Sample #2
+                <small>
+                 An exerpt from a discussion about DS9. 
+                </small>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--<section id="ambience" class="section--ambience">
+        <div class="section__title">
+          <h2>Ambience</h2>
+          <p>...because spaces need to feel alive.</p>
         </div>
         <div class="section__content">
           <ul class="section__content__list">
@@ -77,57 +199,7 @@
             </li>
           </ul>
         </div>
-      </section>
-
-      <section id="podcast" class="section--podcast">
-        <div class="section__title">
-          <h2>Podcast</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="section__content">
-          <ul class="section__content__list">
-            <li>
-              <button class="section__content__list__button" onclick="playpauseTrack()" aria-labelledby="track4">
-                <img src="Images/play.png" alt="play" />
-              </button>
-              <div class="section__content__list__description" id="track4">
-                Track Name
-                <small>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in consequat arcu. Aliquam dignissim egestas ligula nec eleifend. Fusce
-                  ut ligula non tellus tempus mollis. Nulla finibus enim sed est fringilla suscipit. Phasellus ut enim mi. Suspendisse potenti. Sed
-                  placerat massa nibh, at tempus felis varius a. Suspendisse potenti.
-                </small>
-              </div>
-            </li>
-            <li>
-              <button class="section__content__list__button" onclick="playpauseTrack()" aria-labelledby="track5">
-                <img src="Images/play.png" alt="play" />
-              </button>
-              <div class="section__content__list__description" id="track5">
-                Track Name
-                <small>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in consequat arcu. Aliquam dignissim egestas ligula nec eleifend. Fusce
-                  ut ligula non tellus tempus mollis. Nulla finibus enim sed est fringilla suscipit. Phasellus ut enim mi. Suspendisse potenti. Sed
-                  placerat massa nibh, at tempus felis varius a. Suspendisse potenti.
-                </small>
-              </div>
-            </li>
-            <li>
-              <button class="section__content__list__button" onclick="playpauseTrack()" aria-labelledby="track6">
-                <img src="Images/play.png" alt="play" />
-              </button>
-              <div class="section__content__list__description" id="track6">
-                Track Name
-                <small>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in consequat arcu. Aliquam dignissim egestas ligula nec eleifend. Fusce
-                  ut ligula non tellus tempus mollis. Nulla finibus enim sed est fringilla suscipit. Phasellus ut enim mi. Suspendisse potenti. Sed
-                  placerat massa nibh, at tempus felis varius a. Suspendisse potenti.
-                </small>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
+      </section>-->
 
       <section id="contact" class="section--contact">
         <div>
