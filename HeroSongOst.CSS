@@ -48,6 +48,7 @@ header {
   margin-right: auto;
   max-width: 100%;
   text-align: center;
+  padding: 20%;
 }
 
 h1 {
@@ -59,8 +60,8 @@ hgroup img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  max-width: 100%;
-  opacity: 0.8;
+  max-width: 60%;
+  opacity: 1;
 }
 
 nav {
@@ -112,9 +113,10 @@ section {
   border-bottom: 0.05em solid rgba(52, 48, 48, 0.35);
 }
 
+.section--about,
 .section--music,
 .section--voice,
-.section--ambience {
+.section--sounddesign {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -123,6 +125,7 @@ section {
   flex-wrap: wrap;
 }
 
+.section--about,
 .section--voice {
   flex-direction: row-reverse;
 }
@@ -156,6 +159,7 @@ section {
   margin: 0;
 }
 
+.section--about .section__title,
 .section--voice .section__title {
   text-align: left;
 }
@@ -163,7 +167,7 @@ section {
 .section__content {
   width: 400px;
   max-width: 100%;
-  padding: 5vh 5vw;
+  padding: 10vh 10vw;
   flex: 1 1 400px;
   background: rgba(0, 0, 0, 0.35);
 }
@@ -227,11 +231,13 @@ section {
   margin-right: 10px;
   text-decoration: none;
   letter-spacing: 0.025em;
+  opacity: 0.6;
+  transition: opacity 0.2s;
 }
 
 .section--contact a:hover,
 .section--contact a:focus {
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .text-center {
@@ -324,8 +330,8 @@ footer {
   -moz-appearance: none;
   appearance: none;
   height: 5px;
-  background: rgb(80, 78, 51);
-  opacity: 0.5;
+  background: rgb(0, 255, 255);
+  opacity: 0.6;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
   width: 100%;

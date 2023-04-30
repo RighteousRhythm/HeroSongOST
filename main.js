@@ -33,6 +33,7 @@ let button_list = [
   {playpause_btn7 : document.querySelector(".playpause-track7")},
   {playpause_btn8 : document.querySelector(".playpause-track8")},
   {playpause_btn9 : document.querySelector(".playpause-track9")},
+  {playpause_btn10 : document.querySelector(".playpause-track10")},
 ];
 
 //specify global variabls
@@ -98,6 +99,12 @@ let track_list = [
     Artist: "Timothy Vujicic",
     //image: "image url",
     path: "Audio/DT_Podcast_Audio_Bounce.mp3",
+  },
+  {
+    name: "Sound Design Sample #2",
+    Artist: "Timothy Vujicic",
+    //image: "image url",
+    path: "Audio/CrowStorm.wav",
   },
 ];
 

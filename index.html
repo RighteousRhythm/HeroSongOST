@@ -17,19 +17,31 @@
       <hgroup>
         <h1>
           <!--<div class="title">TIM VUJICIC</div>-->
-          <img src="Images/HERO-SONG-ORIGINAL-SOUNDTRACK-2.png" alt="Hero Song Original Soundtrack" />
+          <img src="Images/Master-Logo-Black.png" alt="Hero Song Original Soundtrack" />
         </h1>
       </hgroup>
     </header>
     <nav>
       <ul>
+        <li><a href="#about">About</a></li>
         <li><a href="#music">Music</a></li>
         <li><a href="#voice">Voice</a></li>
-        <li><a href="#ambience">Ambience</a></li>
+        <!--<li><a href="#ambience">Ambience</a></li>-->
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <main id="main">
+
+      <section id="about" class="section--about">
+        <div class="section__title">
+          <h2>About</h2>
+          <p>I'm Tim Vujicic and I write and record music, sound effects and voice elements.  I'm based out of Ontario, Canada and have been working with audio for 15 years.</p>
+        </div>
+        <div class="section__content">
+          <img src="Images/portrait.png" />
+        </div>
+      </section>
+
       <section id="music" class="section--music">
         <div class="section__title">
           <h2>Music</h2>
@@ -121,7 +133,7 @@
       <section id="voice" class="section--voice">
         <div class="section__title">
           <h2>Voice</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>The human instrument, trapped forever...  Kind of horrifying if you think about it!</p>
         </div>
         <div class="section__content">
           <ul class="section__content__list">
@@ -151,70 +163,42 @@
         </div>
       </section>
 
-      <!--<section id="ambience" class="section--ambience">
+      <section id="sounddesign" class="section--sounddesign">
         <div class="section__title">
-          <h2>Ambience</h2>
-          <p>...because spaces need to feel alive.</p>
+          <h2>Sound-Design</h2>
+          <p>Because spaces need to feel alive.</p>
         </div>
         <div class="section__content">
           <ul class="section__content__list">
             <li>
-              <button class="section__content__list__button" onclick="playpauseTrack()" aria-labelledby="track1">
+              <button class="section__content__list__button playpause-track10" onclick="ppSpecTrack(9)" aria-labelledby="track10">
                 <img src="Images/play.png" alt="play" />
               </button>
-              <div class="section__content__list__description" id="track1">
-                Track Name
+              <div class="section__content__list__description" id="track10">
+                Sample #1
                 <small>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in consequat arcu. Aliquam dignissim egestas ligula nec eleifend. Fusce
-                  ut ligula non tellus tempus mollis. Nulla finibus enim sed est fringilla suscipit. Phasellus ut enim mi. Suspendisse potenti. Sed
-                  placerat massa nibh, at tempus felis varius a. Suspendisse potenti.
-                </small>
-              </div>
-            </li>
-            <li>
-              <button class="section__content__list__button" onclick="playpauseTrack()" aria-labelledby="track2">
-                <img src="Images/play.png" alt="play" />
-              </button>
-              <div class="section__content__list__description" id="track2">
-                Track Name
-                <small>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in consequat arcu. Aliquam dignissim egestas ligula nec eleifend. Fusce
-                  ut ligula non tellus tempus mollis. Nulla finibus enim sed est fringilla suscipit. Phasellus ut enim mi. Suspendisse potenti. Sed
-                  placerat massa nibh, at tempus felis varius a. Suspendisse potenti.
-                </small>
-              </div>
-            </li>
-            <li>
-              <button class="section__content__list__button" onclick="playpauseTrack()" aria-labelledby="track3">
-                <img src="Images/play.png" alt="play" />
-              </button>
-              <div class="section__content__list__description" id="track3">
-                Track Name
-                <small>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in consequat arcu. Aliquam dignissim egestas ligula nec eleifend. Fusce
-                  ut ligula non tellus tempus mollis. Nulla finibus enim sed est fringilla suscipit. Phasellus ut enim mi. Suspendisse potenti. Sed
-                  placerat massa nibh, at tempus felis varius a. Suspendisse potenti.
+                  A pair of crows try to keep tabs on eachother in a pine forest during a severe winter storm.
                 </small>
               </div>
             </li>
           </ul>
         </div>
-      </section>-->
+      </section>
 
       <section id="contact" class="section--contact">
         <div>
           <p><a href="mailto:tim@herosongost.com" target="_blank">tim@HeroSongOST.com</a></p>
         </div>
         <div>
-          <a href="https://www.fiverr.com/herosongost" target="_blank">
+          <!--<a href="https://www.fiverr.com/herosongost" target="_blank">
             <img src="Images/Thumbnail-Fiverr.png" alt="Fiverr" />
-          </a>
+          </a>-->
           <!--<a href="http://www.facebook.com" target="_blank">
             <img src="Images/Thumbnail-FB.png" alt="facebook"/>
           </a>-->
-          <a href="https://twitter.com/hero_ost" target="_blank">
+          <!--<a href="https://twitter.com/hero_ost" target="_blank">
             <img src="Images/Thumbnail-Twitter.png" alt="Twitter" />
-          </a>
+          </a>-->
           <!--<a href="https://www.instagram.com" target="_blank">
             <img src="Images/Thumbnail-Insta.png" alt="Instagram"/>
           </a>-->
@@ -242,9 +226,9 @@
           <button class="next-track" onclick="nextTrack()">
             <img src="Images/forward.png" alt="Skip Forward" />
           </button>
-          <button class="mute-track" onclick="muteTrack()">
+          <!--<button class="mute-track" onclick="muteTrack()">
             <img src="Images/muted.png" alt="Play/Pause" />
-          </button>
+          </button>-->
         </div>
 
         <div class="audio-volume">
