@@ -167,7 +167,7 @@ section {
   width: 400px;
   max-width: 100%;
   padding: 10vh 10vw;
-  flex: 1 1 400px;
+  flex: 1 0 400px;
   background: rgba(0, 0, 0, 0.35);
 }
 
